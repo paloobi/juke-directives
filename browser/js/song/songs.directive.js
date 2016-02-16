@@ -4,14 +4,13 @@ juke.directive('songList', function(PlayerFactory){
 		restrict: "E",
 		scope: {
 			songs: "="
-			
 		},
 		templateUrl: "js/song/templates/songs.html",
 		link: function(scope){
 
 			  scope.toggle = function (song) {
 			    if (song !== PlayerFactory.getCurrentSong()) {
-			      PlayerFactory.start(song, songs);
+			      PlayerFactory.start(song, scope.songs);
 			    } else if ( PlayerFactory.isPlaying() ) {
 			      PlayerFactory.pause();
 			    } else {
