@@ -29,4 +29,21 @@ juke.directive('songList', function(PlayerFactory){
 
 	}
 
-})
+});
+
+juke.directive('doubleClick', function() {
+
+	return {
+		restrict: 'A',
+		scope: {
+			doubleClick: '&'
+		},
+		link: function(scope, element, attr) {
+			element.on('dblclick', function(event){
+				console.log(attr);
+				scope.doubleClick();
+			});
+		}
+	}
+
+});
