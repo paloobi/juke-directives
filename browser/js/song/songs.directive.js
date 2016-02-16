@@ -47,3 +47,4 @@ juke.directive('doubleClick', function() {
 	}
 
 });
+

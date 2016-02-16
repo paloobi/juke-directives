@@ -43,9 +43,13 @@ footer {
   padding: 8px; }
   footer .bar {
     overflow: hidden;
-    padding: 9px; }
+    padding: 0 0 0 10px; }
   footer .progress-bar {
-    transition: none !important; }
+    transition: none !important;
+  }
+  footer .progress {
+    height: 18px;
+  }
 
 .album img {
   height: 300px; }
